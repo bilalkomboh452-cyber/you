@@ -1,0 +1,17 @@
+*.apk
+*.aar
+*.aab
+*.dex
+*.class
+bin/
+gen/
+build/
+.gradle/
+local.properties
+captures/
+*.iml
+.idea/
+*.jks
+*.keystore
+.externalNativeBuild
+.cxx/
