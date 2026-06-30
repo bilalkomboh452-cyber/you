@@ -1,0 +1,98 @@
+name: Build WAGLO APK
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Debug APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Download Gradle wrapper (self-contained)
+        run: |
+          set -e
+          mkdir -p gradle/wrapper
+
+          echo "Downloading gradle-wrapper.jar..."
+          curl -fsSL \
+            "https://raw.githubusercontent.com/gradle/gradle/v8.6.0/gradle/wrapper/gradle-wrapper.jar" \
+            -o gradle/wrapper/gradle-wrapper.jar
+
+          echo "Downloading gradlew..."
+          curl -fsSL \
+            "https://raw.githubusercontent.com/gradle/gradle/v8.6.0/gradlew" \
+            -o gradlew
+          chmod +x gradlew
+
+          cat > gradle/wrapper/gradle-wrapper.properties << 'EOF'
+          distributionBase=GRADLE_USER_HOME
+          distributionPath=wrapper/dists
+          distributionUrl=https\://services.gradle.org/distributions/gradle-8.6-bin.zip
+          networkTimeout=10000
+          validateDistributionUrl=true
+          zipStoreBase=GRADLE_USER_HOME
+          zipStorePath=wrapper/dists
+          EOF
+
+          echo "=== Verification ==="
+          ls -lh gradlew gradle/wrapper/
+          head -3 gradlew
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-8.6-$ hashFiles('**/*.gradle*') 
+          restore-keys: gradle-8.6-
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Accept Android SDK licenses
+        run: yes | sdkmanager --licenses 2>/dev/null || true
+
+      - name: Create local.properties
+        run: echo "sdk.dir=${ANDROID_SDK_ROOT}" > local.properties
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: List APK outputs
+        run: find app/build/outputs/apk -name '*.apk' -exec ls -lh {} \;
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: WAGLO-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease --no-daemon
+        continue-on-error: true
+
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WAGLO-release-apk
+          path: app/build/outputs/apk/release/*.apk
+          retention-days: 30
