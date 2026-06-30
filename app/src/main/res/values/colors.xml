@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="green_whatsapp">#25D366</color>
+    <color name="green_dark">#075E54</color>
+    <color name="green_light">#128C7E</color>
+    <color name="red_error">#D32F2F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="on_surface">#212121</color>
+
+    <!-- Category chips -->
+    <color name="cat_education">#1565C0</color>
+    <color name="cat_jobs">#2E7D32</color>
+    <color name="cat_technology">#4527A0</color>
+    <color name="cat_ai">#00695C</color>
+    <color name="cat_crypto">#E65100</color>
+    <color name="cat_news">#B71C1C</color>
+    <color name="cat_business">#1A237E</color>
+    <color name="cat_entertainment">#880E4F</color>
+    <color name="cat_sports">#33691E</color>
+    <color name="cat_community">#4E342E</color>
+    <color name="cat_others">#546E7A</color>
+
+    <!-- MD3 seed colors -->
+    <color name="md_theme_primary">#006E1C</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#97F990</color>
+    <color name="md_theme_onPrimaryContainer">#002204</color>
+    <color name="md_theme_secondary">#52634F</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#D5E8CF</color>
+    <color name="md_theme_onSecondaryContainer">#111F0F</color>
+    <color name="md_theme_surface">#FDFDF5</color>
+    <color name="md_theme_onSurface">#1A1C19</color>
+    <color name="md_theme_surfaceVariant">#DEE4DA</color>
+    <color name="md_theme_onSurfaceVariant">#424940</color>
+    <color name="md_theme_outline">#727970</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+
+    <!-- Dark -->
+    <color name="md_theme_dark_primary">#7BDC74</color>
+    <color name="md_theme_dark_onPrimary">#003909</color>
+    <color name="md_theme_dark_primaryContainer">#005313</color>
+    <color name="md_theme_dark_onPrimaryContainer">#97F990</color>
+    <color name="md_theme_dark_surface">#1A1C19</color>
+    <color name="md_theme_dark_onSurface">#E2E3DC</color>
+</resources>

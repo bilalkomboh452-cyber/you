@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/sort_serial"
+        android:title="@string/sort_serial" />
+    <item android:id="@+id/sort_category"
+        android:title="@string/sort_category" />
+    <item android:id="@+id/sort_date"
+        android:title="@string/sort_date" />
+    <item android:id="@+id/sort_confidence"
+        android:title="@string/sort_confidence" />
+    <item android:id="@+id/remove_duplicates"
+        android:title="@string/remove_duplicates" />
+</menu>

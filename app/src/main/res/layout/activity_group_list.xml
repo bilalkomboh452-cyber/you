@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green_dark"
+            app:title="@string/view_groups"
+            app:titleTextColor="@color/white"
+            app:navigationIconTint="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Search bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/search_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"
+                android:background="@drawable/bg_search" />
+            <ImageButton
+                android:id="@+id/btnClearSearch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Clear"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- Filters row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="4dp">
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFavorites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/favorites_only"
+                style="@style/Widget.Material3.Chip.Filter" />
+        </LinearLayout>
+
+        <!-- Progress + count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="4dp">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="1"
+                android:indeterminate="true"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Selection buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp">
+            <Button android:id="@+id/btnSelectAll"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:layout_marginEnd="4dp"
+                android:text="@string/select_all"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+            <Button android:id="@+id/btnUnselectAll"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/unselect_all"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+        </LinearLayout>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:padding="8dp" />
+
+        <!-- Empty state -->
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/no_groups_found"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- Export buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+            <Button android:id="@+id/btnExportTxt"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:layout_marginEnd="2dp"
+                android:text="@string/export_txt"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+            <Button android:id="@+id/btnExportCsv"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:layout_marginEnd="2dp"
+                android:text="@string/export_csv"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+            <Button android:id="@+id/btnExportJson"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:layout_marginEnd="2dp"
+                android:text="@string/export_json"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+            <Button android:id="@+id/btnExportHtml"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:layout_marginEnd="2dp"
+                android:text="@string/export_html"
+                style="@style/Widget.Material3.Button.OutlinedButton" />
+            <Button android:id="@+id/btnCopyClipboard"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="@string/copy_clipboard"
+                style="@style/Widget.Material3.Button" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

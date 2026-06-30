@@ -1,0 +1,21 @@
+WAGLO v2 - GitHub Ready Project
+================================
+
+STEP 1: Rename these 2 files/folders:
+
+  dot_gitignore          -->  .gitignore
+  dot_github/            -->  .github/
+
+(They start with dot so some apps hide them, so renamed for visibility)
+
+STEP 2: Push ALL files to GitHub
+
+STEP 3: GitHub Actions will auto-run and build APK
+
+BUILD LOCALLY:
+  chmod +x download-wrapper.sh
+  ./download-wrapper.sh
+  chmod +x gradlew
+  ./gradlew assembleDebug
+
+APK output: app/build/outputs/apk/debug/app-debug.apk

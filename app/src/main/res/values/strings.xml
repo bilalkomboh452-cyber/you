@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WAGLO</string>
+    <string name="app_tagline">WhatsApp Group Link Organizer</string>
+
+    <!-- Dashboard -->
+    <string name="total_groups">Total Groups</string>
+    <string name="active_groups">Active</string>
+    <string name="favorite_groups">Favorites</string>
+    <string name="duplicate_groups">Duplicates</string>
+    <string name="category_breakdown">Category Breakdown</string>
+    <string name="service_status">Service Status</string>
+    <string name="service_active">● Active</string>
+    <string name="service_inactive">○ Inactive</string>
+    <string name="enable_service">Enable Service</string>
+    <string name="service_settings">Service Settings</string>
+    <string name="view_groups">View Groups</string>
+    <string name="discover_links">Discover Links</string>
+    <string name="new_groups_captured">%d new group(s) captured!</string>
+    <string name="no_data">No data yet</string>
+
+    <!-- Group List -->
+    <string name="groups_count">%d groups</string>
+    <string name="search_hint">Search groups, links…</string>
+    <string name="filter_all">All Categories</string>
+    <string name="filter_news">News</string>
+    <string name="filter_other">Others</string>
+    <string name="favorites_only">Favorites only</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect</string>
+    <string name="no_groups_found">No groups found</string>
+    <string name="unnamed_group">(Unnamed Group)</string>
+    <string name="unnamed_link">(No name)</string>
+
+    <!-- Export -->
+    <string name="export_txt">TXT</string>
+    <string name="export_csv">CSV</string>
+    <string name="export_json">JSON</string>
+    <string name="export_html">HTML</string>
+    <string name="copy_clipboard">Copy</string>
+    <string name="share_via">Share via…</string>
+    <string name="exported_to">Exported to</string>
+    <string name="export_failed">Export failed</string>
+    <string name="copied_clipboard">Links copied to clipboard</string>
+    <string name="no_selection">No items selected</string>
+
+    <!-- Actions -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_group">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="later">Later</string>
+    <string name="confirm_delete">Delete this group?</string>
+    <string name="confirm_remove_duplicates">Remove all duplicates?</string>
+    <string name="add_notes_hint">Add notes…</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_serial">Number</string>
+    <string name="sort_category">Category</string>
+    <string name="sort_date">Date Added</string>
+    <string name="sort_confidence">Confidence</string>
+    <string name="remove_duplicates">Remove Duplicates</string>
+
+    <!-- Accessibility dialog -->
+    <string name="accessibility_required_title">Enable Accessibility</string>
+    <string name="accessibility_required_msg">WAGLO needs the Accessibility Service to passively read WhatsApp invite links visible on your screen. No messages are sent or read.</string>
+    <string name="enable_now">Enable Now</string>
+
+    <!-- Discovery -->
+    <string name="discovery_title">Discover Links</string>
+    <string name="discovery_hint">Paste text or HTML containing WhatsApp invite links…</string>
+    <string name="discover_btn">Extract Links</string>
+    <string name="clear">Clear</string>
+    <string name="html_mode">HTML Mode</string>
+    <string name="discovery_success">%d new link(s) saved!</string>
+    <string name="discovery_no_links">No valid links found.</string>
+    <string name="enter_text_hint">Please paste some text first.</string>
+    <string name="error_generic">An error occurred. Please try again.</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="urdu">Urdu</string>
+    <string name="auto_classify">Auto-classify links</string>
+    <string name="accessibility_service">Accessibility Service</string>
+    <string name="delete_all_data">Delete All Data</string>
+    <string name="delete_all_title">Delete All Data</string>
+    <string name="delete_all_msg">This will permanently delete all saved groups. Continue?</string>
+    <string name="all_deleted">All data deleted.</string>
+    <string name="about">About</string>
+    <string name="about_message">WAGLO v2.0
+
+A privacy-first WhatsApp group link organizer.
+
+Passively reads invite links from your screen using Accessibility Service.
+
+No messages sent. No groups auto-joined. All data stays on your device.</string>
+</resources>

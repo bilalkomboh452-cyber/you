@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WAGLO</string>
+    <string name="app_tagline">واٹس ایپ گروپ لنک آرگنائزر</string>
+    <string name="service_active">● فعال</string>
+    <string name="service_inactive">○ غیر فعال</string>
+    <string name="view_groups">گروپس دیکھیں</string>
+    <string name="discover_links">لنکس تلاش کریں</string>
+    <string name="settings">ترتیبات</string>
+    <string name="dark_mode">ڈارک موڈ</string>
+    <string name="language">زبان</string>
+    <string name="english">انگریزی</string>
+    <string name="urdu">اردو</string>
+    <string name="save">محفوظ کریں</string>
+    <string name="cancel">منسوخ</string>
+    <string name="delete_group">حذف کریں</string>
+    <string name="yes">ہاں</string>
+    <string name="no">نہیں</string>
+    <string name="no_groups_found">کوئی گروپ نہیں ملا</string>
+    <string name="search_hint">گروپس تلاش کریں…</string>
+    <string name="select_all">سب منتخب کریں</string>
+    <string name="unselect_all">منتخب ہٹائیں</string>
+    <string name="accessibility_required_title">ایکسیسبیلٹی فعال کریں</string>
+    <string name="accessibility_required_msg">WAGLO کو واٹس ایپ کے لنکس پڑھنے کے لیے ایکسیسبیلٹی سروس کی ضرورت ہے۔</string>
+    <string name="enable_now">ابھی فعال کریں</string>
+    <string name="later">بعد میں</string>
+    <string name="about_message">WAGLO v2.0
+
+پرائیویسی فرسٹ واٹس ایپ گروپ لنک آرگنائزر</string>
+</resources>
